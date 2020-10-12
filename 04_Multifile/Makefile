@@ -45,4 +45,4 @@ clean:
 	rm -f $(TRASH)
 
 distclean:      clean
-	rm -rf $(GENERATES) *test*
+	rm -rf $(GENERATES) *test* errorfile
