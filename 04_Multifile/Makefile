@@ -16,7 +16,7 @@ liboutput_static.a:   fun.o const.o
 	ar -rcs liboutput_static.a const.o fun.o
 
 liboutput.so:   fun.o const.o
-	cc -shared -fPIC -fun.o const.o -o liboutput.so
+	cc -shared -fPIC fun.o const.o -o liboutput.so
 
 test: prog prog-a prog-so
 	./prog 2>>errorfile >prog-test0
