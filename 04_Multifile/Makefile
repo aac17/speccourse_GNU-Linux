@@ -1,6 +1,6 @@
 GENERATES = prog prog-a prog-so test
 TRASH = *.o *~ o.* *.a *.so
-CFLAGS = -fPIC
+CFLAGS=-fPIC
 
 all:    prog prog-a prog-so test
 
@@ -12,10 +12,10 @@ prog-a:  prog.o liboutput_static.a
 prog-so: prog.o liboutput.so
 	cc -L. prog.o -loutput -o prog-so
 
-liboutput_static.a:   fun.o const.o
+liboutput_static.a:    fun.o const.o
 	ar -rcs liboutput_static.a const.o fun.o
 
-liboutput.so:   fun.o const.o
+liboutput.so:    fun.o const.o
 	cc -shared $(CFLAGS) fun.o const.o -o liboutput.so
 
 test: prog prog-a prog-so
