@@ -12,7 +12,7 @@
 #define ONLELINE 3
 #define MAXSTR 80
 
-void main() {
+int main() {
     setlocale(LC_ALL, "");
 	WINDOW *winA, *winB, *winO;
     
@@ -32,7 +32,6 @@ void main() {
     
     
 	char inA[MAXSTR], inB[MAXSTR];
-	int c = 0;
 	int half;
 
 	initscr();
