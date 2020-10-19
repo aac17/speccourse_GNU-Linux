@@ -1,3 +1,4 @@
+#include <config.h>
 #ifndef PCRE2_CODE_UNIT_WIDTH
 #define PCRE2_CODE_UNIT_WIDTH 8
 #endif
@@ -37,6 +38,7 @@ int main() {
 	initscr();
 	cbreak();
 	printw("Input:");
+    refresh();
 
 	half = (COLS-2*DX)/2;
 	winA = newwin(ONLELINE, half, DX, DX);

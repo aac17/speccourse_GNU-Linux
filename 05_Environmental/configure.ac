@@ -13,6 +13,7 @@ AM_INIT_AUTOMAKE
 
 # Checks for libraries.
 AC_CHECK_LIB([ncursesw], [initscr],[],  AC_MSG_ERROR([Curses is needed]))
+AC_CHECK_LIB([pcre2-8], [pcre2_compile_8],[],  AC_MSG_ERROR([PCRE2-8 is needed]))
 
 
 # Checks for header files.
@@ -23,6 +24,8 @@ AC_CHECK_HEADERS([ncurses.h] ,[],  AC_MSG_ERROR([No ncurses.h] ))
 
 # Checks for library functions.
 AC_CHECK_FUNCS([setlocale])
+
+#AC_ARG_ENABLE([configure], AS_HELP_STRING([ --without-UTF], [removes the PCRE2_UCP flag from the code]))
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
