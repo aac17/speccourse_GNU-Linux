@@ -63,8 +63,11 @@ int main() {
         pattern = (PCRE2_SPTR)inA;
         subject = (PCRE2_SPTR)inB;
         subject_length = (PCRE2_SIZE)strlen((char *)subject);
-        
+#ifndef configure
+        re = pcre2_compile(pattern, PCRE2_ZERO_TERMINATED, 0, &errnum, &erroffs, NULL);
+#else
         re = pcre2_compile(pattern, PCRE2_ZERO_TERMINATED, PCRE2_UCP, &errnum, &erroffs, NULL);
+#endif
 
         if (re == NULL) {
             PCRE2_UCHAR buffer[256];

@@ -25,7 +25,9 @@ AC_CHECK_HEADERS([ncurses.h] ,[],  AC_MSG_ERROR([No ncurses.h] ))
 # Checks for library functions.
 AC_CHECK_FUNCS([setlocale])
 
-#AC_ARG_ENABLE([configure], AS_HELP_STRING([ --without-UTF], [removes the PCRE2_UCP flag from the code]))
+AC_ARG_ENABLE([configure], AS_HELP_STRING([ --without-UTF], [removes the PCRE2_UCP flag from the code]))
+
+AS_IF([test "x$with_UTF" != "xno"], [AC_DEFINE(configure, [], [with utf])])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
