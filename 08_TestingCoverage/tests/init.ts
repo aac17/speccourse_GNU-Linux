@@ -11,9 +11,9 @@
     ck_assert_msg( a[0] == (float)1.3f, "value");
     buf_clear(a);
     ck_assert_msg( buf_size(a) == 0, "clear");
-    ck_assert_msg( a != 0, "clear not-free",);
+    ck_assert_msg( a != 0, "clear not-free");
     buf_free(a);
-    ck_assert_msg( a == 0, "free",);
+    ck_assert_msg( a == 0, "free");
     buf_clear(a);
     ck_assert_msg(buf_size(a) == 0, "clear empty");
     ck_assert_msg(a == 0, "clear no-op");

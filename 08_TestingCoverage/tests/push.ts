@@ -17,4 +17,4 @@
     ck_assert_msg(buf_size(ai) == 0, "size 0 (grow)");
     buf_trunc(ai, 100);
     ck_assert_msg( buf_capacity(ai) == 100, "trunc 100");
-    buf_free(ai)
+    buf_free(ai);
