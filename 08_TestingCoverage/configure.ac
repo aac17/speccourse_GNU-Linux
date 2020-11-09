@@ -29,5 +29,12 @@ AC_FUNC_MALLOC
 AC_FUNC_REALLOC
 AC_CHECK_FUNCS([gettimeofday strtoull])
 
+AC_ARG_ENABLE([gcov],
+  [AS_HELP_STRING([--enable-gcov],
+    [use Gcov to test the test suite])],
+    [],
+    [enable_gcov=no])
+
 AC_CONFIG_FILES([Makefile src/Makefile tests/Makefile])
+AM_CONDITIONAL([COND_GCOV],[test '!' "$enable_gcov" = no])
 AC_OUTPUT
