@@ -5,8 +5,10 @@ AC_PREREQ([2.69])
 AC_INIT([Growable Memory Buffers for C99], [0.0], [ac17@bk.ru])
 AM_INIT_AUTOMAKE([foreign])
 LT_INIT([disable-static])
-AC_CONFIG_SRCDIR([src/tests.c])
+AC_CONFIG_SRCDIR([src/buf.h])
 AC_CONFIG_HEADERS([config.h])
+
+PKG_CHECK_MODULES([CHECK],[check])
 
 # Checks for programs.
 AC_PROG_CC
@@ -27,5 +29,5 @@ AC_FUNC_MALLOC
 AC_FUNC_REALLOC
 AC_CHECK_FUNCS([gettimeofday strtoull])
 
-AC_CONFIG_FILES([Makefile src/Makefile])
+AC_CONFIG_FILES([Makefile src/Makefile tests/Makefile])
 AC_OUTPUT
