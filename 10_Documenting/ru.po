@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guessnumber 0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-22 23:46+0300\n"
+"POT-Creation-Date: 2020-11-23 02:53+0300\n"
 "PO-Revision-Date: 2020-11-22 23:02+0300\n"
 "Last-Translator: Asi <asi@asi-virtualbox>\n"
 "Language-Team: Russian\n"
@@ -18,34 +18,34 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: guessnumber.c:37
+#: guessnumber.c:85
 msgid "Think of a number between I and C\n"
 msgstr "Задумайте число от I до C\n"
 
-#: guessnumber.c:43
+#: guessnumber.c:91
 #, c-format
 msgid "Is the number greater than %s?\n"
 msgstr "Число больше %s?\n"
 
-#: guessnumber.c:45 guessnumber.c:62
+#: guessnumber.c:93 guessnumber.c:110
 msgid "yes"
 msgstr "да"
 
-#: guessnumber.c:51
+#: guessnumber.c:99
 #, c-format
 msgid "Your number is %s\n"
 msgstr "Ваше число %s\n"
 
-#: guessnumber.c:54
+#: guessnumber.c:102
 msgid "Think of a number between 1 and 100\n"
 msgstr "Задумайте число от 1 до 100\n"
 
-#: guessnumber.c:60
+#: guessnumber.c:108
 #, c-format
 msgid "Is the number greater than %d?\n"
 msgstr "Число больше %d?\n"
 
-#: guessnumber.c:68
+#: guessnumber.c:116
 #, c-format
 msgid "Your number is %d\n"
 msgstr "Ваше число %d\n"

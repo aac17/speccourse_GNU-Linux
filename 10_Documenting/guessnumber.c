@@ -1,3 +1,8 @@
+/** @file guessnumber.c
+ * Main file
+ *
+ * Number guessing program
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -5,9 +10,21 @@
 #include <libintl.h>
 #include <locale.h>
 
+/**
+ * Add a macro to shorten the @p gettext(...) function into @p _(...)
+ * 
+ * @param STRING String to translate
+ */
 #define _(STRING) gettext(STRING)
+
+/**
+ * Set locale path
+ */
 #define LOCALE_PATH "."
 
+/**
+ * Const array that contains the Roman representation of numbers from 1 to 100
+ */
 const char *roman_table[100] ={ "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", 
 "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX", "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII",
 "XXVIII", "XXIX", "XXX", "XXXI", "XXXII", "XXXIII", "XXXIV", "XXXV", "XXXVI", "XXXVII", "XXXVIII", "XXXIX",
@@ -16,12 +33,43 @@ const char *roman_table[100] ={ "I", "II", "III", "IV", "V", "VI", "VII", "VIII"
    "LXVIII", "LXIX", "LXX", "LXXI", "LXXII", "LXXIII", "LXXIV", "LXXV", "LXXVI", "LXXVII", "LXXVIII", "LXXIX",
     "LXXX", "LXXXI", "LXXXII", "LXXXIII", "LXXXIV", "LXXXV", "LXXXVI", "LXXXVII", "LXXXVIII", "LXXXIX", "XC",
      "XCI", "XCII", "XCIII", "XCIV", "XCV", "XCVI", "XCVII", "XCVIII", "XCIX", "C" };
-     
+
+
+
+/**
+ * Converts @p x to Roman numeral system
+ * 
+ * @param x Decimal number
+ * 
+ */     
 char *
 to_roman(int x)
 {
     return roman_table[x];
 }
+
+
+
+/**
+ * Converts @p x to Decimal notation
+ * 
+ * @param x String corresponding to the Roman number
+ * 
+ */ 
+int
+from_roman(char *x)
+{
+    for (int i = 0; i < 100; i++) {
+        if (!strcmp(x, roman_table[i])) {
+            return i + 1;
+        }
+    }
+    
+    
+    return -1;
+}
+
+
 
 int 
 main(int argc, char *argv[])
