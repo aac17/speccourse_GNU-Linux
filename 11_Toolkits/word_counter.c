@@ -22,7 +22,7 @@ main(int argc, char **argv) {
         //g_strpcpy(gs, s);
         words = g_strsplit(s, " ", 80);
         if (words != NULL) {
-            guint len = g_strv_length (words);
+            guint len = g_strv_length(words);
             for (int i = 0; i < len; i++) {
                 if (g_hash_table_contains(wordtable, words[i])) {
                     g_hash_table_insert(wordtable, words[i],  GINT_TO_POINTER(GPOINTER_TO_INT(g_hash_table_lookup(wordtable, words[i])) + 1));
@@ -31,6 +31,8 @@ main(int argc, char **argv) {
                 }
             }
         }
+        g_strfreev(words);
+        
         
     }
     g_hash_table_foreach(wordtable, (GHFunc)iterator, "%s: %d\n");
