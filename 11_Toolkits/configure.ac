@@ -4,6 +4,7 @@
 AC_PREREQ([2.69])
 AC_INIT([Word counter], [0.0], [ac17@bk.ru])
 AM_INIT_AUTOMAKE([foreign])
+AC_CONFIG_SRCDIR([word_counter.c])
 AC_CONFIG_HEADERS([config.h])
 AM_PATH_GLIB_2_0([],[],[],[gobject])
 
@@ -13,6 +14,7 @@ AC_PROG_CC
 # Checks for libraries.
 
 # Checks for header files.
+AC_CHECK_HEADERS([string.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 
