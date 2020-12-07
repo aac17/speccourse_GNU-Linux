@@ -1,9 +1,3 @@
-/* COMMENT:: Growable Memory Buffers for C99, 0.0: Tue Dec  8 00:01:51 MSK 2020 */
-/* COMMENT:: Growable Memory Buffers for C99, 0.0: Tue Dec  8 00:01:14 MSK 2020 */
-/* COMMENT:: Growable Memory Buffers for C99, 0.0: Tue Dec  8 00:00:00 MSK 2020 */
-/* COMMENT:: Growable Memory Buffers for C99, 0.0: Mon Dec  7 23:58:42 MSK 2020 */
-/* COMMENT:: Growable Memory Buffers for C99, 0.0: Mon Dec  7 23:58:11 MSK 2020 */
-/* COMMENT:: Growable Memory Buffers for C99, 0.0: Mon Dec  7 23:22:41 MSK 2020 */
 #include <stdlib.h>
 #include <stddef.h>
 

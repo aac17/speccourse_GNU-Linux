@@ -7,6 +7,7 @@ AM_INIT_AUTOMAKE([foreign])
 LT_INIT([disable-static])
 AC_CONFIG_SRCDIR([src/buf.h])
 AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_MACRO_DIRS([m4])
 
 PKG_CHECK_MODULES([CHECK],[check])
 
@@ -41,10 +42,19 @@ AC_OUTPUT
 
 
 #adding script 
-define(FILES, 'src/buf.c' 'src/buf.h' 'src/libbuf.c')dnl
+define([FILES], [src/buf.c] [src/buf.h] [src/libbuf.c])
+define([TEMPLATE], [..........])
+define(STR, [COMMENT:: Growable Memory Buffers for C99, 0.0: [0-9][0-9].[0-9][0-9].[0-9][0-9][0-9][0-9]])
 
-sed -i "1s/'/* COMMENT:: Growable Memory Buffers for C99, 0.0: $* */'/'/* COMMENT:: Growable Memory Buffers for C99, 0.0: $(date) */'/g" FILES
-sed t label1
-sed -i "1i /* COMMENT:: Growable Memory Buffers for C99, 0.0: $(date) */" FILES
-sed :label1
+define([TODAY], [date])
+define([TODAYSTR], [/* COMMENT:: Growable Memory Buffers for C99, 0.0: $(date +%d.%m.%y) */])
+define([REPLYSTR], [COMMENT:: Growable Memory Buffers for C99, 0.0: $(date +%d.%m.%y)])
+
+
+
+sed -i -e "1s/STR//g" FILES
+sed 't l'
+sed -i -e "1i TODAYSTR" FILES
+sed -e ':l'
+
 
