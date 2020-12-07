@@ -38,3 +38,13 @@ AC_ARG_ENABLE([gcov],
 AC_CONFIG_FILES([Makefile src/Makefile tests/Makefile])
 AM_CONDITIONAL([COND_GCOV],[test '!' "$enable_gcov" = no])
 AC_OUTPUT
+
+
+#adding script 
+define(FILES, 'src/buf.c' 'src/buf.h' 'src/libbuf.c')dnl
+
+sed -i "1s/'/* COMMENT:: Growable Memory Buffers for C99, 0.0: $* */'/'/* COMMENT:: Growable Memory Buffers for C99, 0.0: $(date) */'/g" FILES
+sed t label1
+sed -i "1i /* COMMENT:: Growable Memory Buffers for C99, 0.0: $(date) */" FILES
+sed :label1
+
