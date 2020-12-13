@@ -2,10 +2,12 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
+AC_INIT([Number guessing program], [0.0], [ac17@bk.ru],[guessnumber])
 AM_INIT_AUTOMAKE([foreign])
 AC_CONFIG_SRCDIR([guessnumber.c])
 AC_CONFIG_HEADERS([config.h])
+
+
 
 # Checks for programs.
 AC_PROG_CC

@@ -5,7 +5,7 @@
 #include <libintl.h>
 #include <locale.h>
 //#include "gettext.h"
-//#include "configure.h"
+#include "config.h"
 
 #define _(STRING) gettext(STRING)
 
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	dir = dirname(realpath(argv[0], NULL));
 	setlocale (LC_ALL, "");
-	bindtextdomain ("guessnumber", dir);
+	bindtextdomain ("guessnumber", LOCALEDIR);
 	textdomain ("guessnumber");
 
 	puts(_("Think of a number between 1 and 100\n"));

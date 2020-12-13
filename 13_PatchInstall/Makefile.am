@@ -1,7 +1,10 @@
 bin_PROGRAMS=guessnumber
-pkgdata_DATA=ru/LC_MESSAGES/guessnumber.mo
+AM_CPPFLAGS = -D LOCALEDIR='"$(DESTDIR)/$(localedir)"'
+pkgdatadir = $(DESTDIR)/$(localedir)/ru/LC_MESSAGES
+pkgdata_DATA= $(DESTDIR)/$(localedir)/ru/LC_MESSAGES/guessnumber.mo
 
-ru/LC_MESSAGES/guessnumber.mo: ru.po
+
+$(DESTDIR)/$(localedir)/ru/LC_MESSAGES/guessnumber.mo: ru.po
 	mkdir -p `dirname $@`
 	msgfmt $< -o $@
 
