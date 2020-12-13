@@ -1,0 +1,37 @@
+# Guess number program
+# Copyright (C) 2020 me
+# This file is distributed under the same license as the guessnumber package.
+# A.Chichaeva <ac17@bk.ru>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: guessnumber 0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-22 21:38+0300\n"
+"PO-Revision-Date: 2020-11-22 23:02+0300\n"
+"Last-Translator: Asi <asi@asi-virtualbox>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: guessnumber.c:22
+msgid "Think of a number between 1 and 100\n"
+msgstr "Задумайте число от 1 до 100\n"
+
+#: guessnumber.c:28
+#, c-format
+msgid "Is the number greater than %d?\n"
+msgstr "Число больше %d?\n"
+
+#: guessnumber.c:30
+msgid "yes"
+msgstr "да"
+
+#: guessnumber.c:36
+#, c-format
+msgid "Your number is %d\n"
+msgstr "Ваше число %d\n"
